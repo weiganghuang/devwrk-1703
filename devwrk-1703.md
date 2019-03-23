@@ -5,7 +5,7 @@
 ****
 
 ### Use case
-![](https://github.com/weiganghuang/cl-devnet-devwrk-1703/blob/master/image/usercase.png)
+![](https://github.com/weiganghuang/devwrk-1703/blob/master/image/usercase.png)
 
 ### Requirements
 
