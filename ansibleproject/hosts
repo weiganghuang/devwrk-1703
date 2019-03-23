@@ -1,0 +1,16 @@
+[nso]
+172.23.123.231
+[master]
+172.23.123.228
+[target1]
+172.23.123.229
+[target2]
+172.23.123.230
+[targets:children]
+target1
+target2
+[all:children]
+nso
+master
+targets
+

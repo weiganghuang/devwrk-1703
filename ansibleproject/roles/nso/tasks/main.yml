@@ -1,0 +1,32 @@
+---
+#file: roles/nso/tasks/main.xml
+
+- name: copy nso images, sm package, and device inventory
+  include_tasks: "nso_copy_images.yml"
+  tags: nso_copy_images
+
+# install nso
+- name: install nso
+  include_tasks: "nso_install.yml"
+  tags: nso_install
+
+# install ned and service packages
+- name: install ned and service packages
+  include_tasks: "nso_install_packages.yml"
+  tags: nso_install_package
+
+# start nso with package reload
+- name: start nso application
+  include_tasks: "nso_start.yml"
+  tags: nso_start.yml
+
+# load device inventory, devices and sync master
+- name: add devices
+  include_tasks: "nso_add_devices.yml"
+  tags: nso_add_devices
+
+# postcheck nso
+- name: post check
+  include_tasks: "nso_postcheck.yml"
+  tags: nso_postcheck
+
