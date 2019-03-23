@@ -1,4 +1,4 @@
-# Using Ansible to Automate Environement Configuration, Application (NSO) Deployment, and Beyond  
+# DevNet Workshop Build an Ansible Playbook to Automate NSO Service Package Deployment  
 ## Hands On Guide
 
 ****
