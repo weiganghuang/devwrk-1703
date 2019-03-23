@@ -1,4 +1,5 @@
-# DevNet Workshop Build an Ansible Playbook to Automate NSO Service Package Deployment  
+# DevNet Workshop 
+# Build an Ansible Playbook to Automate NSO Service Package Deployment  
 ## Hands On Guide
 
 ****
