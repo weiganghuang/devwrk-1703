@@ -10,13 +10,19 @@
 ### Requirements
 
 * Use case: Cisco NSO to manage DNS servers and invoke an action of synchronization from DNS master to DNS targets.
-* Application deployment: Install Cisco NSO and service packages, device inventory on host N. NSO host manages DNS hosts, M, T1, and T2.
-* Security compliance -1 , the communication between NSO to hosts it manages (M, T1 and T2) is limited to no-login, key based ssh.
-* Security compliance -2, the transport among DNS hosts is limited to non-interactive, no-login, key based. 
+* Application deployment
+
+  * Install Cisco NSO and service packages to NSO host N.
+  * On-boarding devices (M, T1, T2) onto NSO installed at N.
+ 
+* Security compliances:
+
+  * The communication between NSO to hosts it manages (M, T1 and T2) is limited to no-login, key based ssh.
+  * The transport among DNS hosts is limited to non-interactive, no-login, key based. 
 * Users:
   * dvans: owns and runs ansible play books
   * dvnso: owns and runs NSO
-  * cl00254: device (DNS servers) 
+  * cl00254: device (DNS servers) user
   * cl94644: performs synchronization from master to targets
 
 
