@@ -1,3 +1,4 @@
+![](./media/media/image2.png)
 # DevNet Workshop 
 # Build an Ansible Playbook to Automate NSO Service Package Deployment  
 ## Hands On Guide
@@ -39,10 +40,10 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 * Cisco NSO application VM (Host N):
   * Cisco NSO application host manages DNS master server M. 
   * Hosts M, T1, and T2 are also known to NSO.
-  * DNS synchronization operation from M to T1 and T2 are initiated from NSO as the service action. 
+  * DNS synchronization operation from M to T1 and T2 are initiated from NSO as a service action. 
 
 * DNS master M:
-  * DNS master managed by NSO. NSO end users can pick and choose the DNS configration portion to synchronize to targets.
+  * DNS master managed by NSO. NSO end users can pick and choose DNS configration portions to synchronize from M to targets T1 and T2.
 
 * DNS targets T1 and T2:
   * DNS targets in the network
