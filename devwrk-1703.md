@@ -74,7 +74,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
 Steps:  
 
-* RDP to Jump start server: **check your Tile**
+* RDP to Jump start server: **check your Tile
 * putty to your assigned ansible host (A)
 
 [Jump start server and VM Assignment](https://app.smartsheet.com/b/publish?EQBCT=b4f97553bce344ffa076165fd5f03391) 
