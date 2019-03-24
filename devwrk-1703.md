@@ -51,7 +51,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
 ### Ansible Playbook Design
 
-* Ansible inventory (hosts) with three groups:
+* Inventory (hosts):
   * nso
   * master
   * targets
@@ -66,13 +66,15 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
   * nso
      * tasks: NSO and packages installation and testing
      
+ * Playbook skeleton:
+     
 ![](https://github.com/weiganghuang/devwrk-1703/blob/master/image/tree.png)
 
 ### Access your setup
 
 Steps:  
 
-* RDP to Jump start server
+* RDP to Jump start server: **check your Tile**
 * putty to your assigned ansible host (A)
 
 [Jump start server and VM Assignment](https://app.smartsheet.com/b/publish?EQBCT=b4f97553bce344ffa076165fd5f03391) 
