@@ -74,8 +74,8 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
 Steps:  
 
-* RDP to Jump start server: **_check your Tile_**
-* putty to your assigned ansible host (A)
+* RDP to Jump start server
+* putty to your assigned ansible host (A) 
 
 [Jump start server and VM Assignment](https://app.smartsheet.com/b/publish?EQBCT=b4f97553bce344ffa076165fd5f03391) 
  
@@ -84,9 +84,10 @@ Steps:
 
 1. Inspect pre-defined directories for the lab. 
 
-   Log on to your Ansible controller vm (A), refer [Jump start server and VM Assignment](https://app.smartsheet.com/b/publish?EQBCT=b4f97553bce344ffa076165fd5f03391) for VM assignment and credentials. 
+   Log on to your Ansible controller vm (A), **_check your Tile_**
+ for VM assignment and credentials. 
 
-   * Check home directory, expect to see ansibleproject, image and package files, and helper scripts are pre-loaded for you. 
+   * Check home directory, expect to see ansibleproject, image and package files, also check the helper scripts are pre-loaded for you. 
    
      Sample output:
 
