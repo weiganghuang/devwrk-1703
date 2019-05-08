@@ -76,8 +76,6 @@ Steps:
 
 * RDP to Jump start server
 * putty to your assigned ansible host (A) 
-
-[Jump start server and VM Assignment](https://app.smartsheet.com/b/publish?EQBCT=b4f97553bce344ffa076165fd5f03391) 
  
 
 ### Create and Test Ansible Playbooks 
@@ -108,7 +106,7 @@ Steps:
  
 2.  Inspect pre-populated Ansible inventory file `/home/dvans/home/ansibleproject/hosts`.  
 
-    `hosts` contains the group ip address for hosts ( N, M, T1, and T2). Make sure the ip address of NSO matches to [Jump start server and VM Assignment](https://app.smartsheet.com/b/publish?EQBCT=b4f97553bce344ffa076165fd5f03391)
+    `hosts` contains the group ip address for hosts ( N, M, T1, and T2). Make sure the ip address of NSO matches to **_your Tile_**
      
     Sample contents of hosts: [hosts](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/hosts).
       
@@ -141,9 +139,9 @@ Steps:
     
     Sample file: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/se/tasks/main.yml)
     
-6. Create tasks for role "master". As mentioned in the requirements, dns master M is managed by NSO. To meet the security compliance, the communication between NSO host N and the device M is limited to non-login, non-interactive, key based ssh. One of the tasks is to add rsa public key of N to M. In addition , we define a task to limit sudoers to perform only the allowed operations.  
+6. Create tasks for role "master". As mentioned in the requirements, dns master M is managed by NSO. To meet the security compliance, the communication between NSO host N and M is limited to non-login, non-interactive, key based ssh. One of the tasks is to add rsa public key of N to M. In addition , we define a task to limit sudoers to perform only the allowed operations.  
   
-    The DNS synchronization from master to targets is performed by python application tool syncdns from DNS master. Thus,we also need to define a task to install syncdns package onto dns master M.  
+    The DNS synchronization from master to targets is performed by predefined python application `syncdns` from DNS master. Thus,we also need to define a task to install syncdns package onto dns master M.  
      
     For this play, we define tasks in `/home/dvans/ansibleproject/roles/master/tasks/main.yml`.  
 
