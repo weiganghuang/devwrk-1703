@@ -220,7 +220,7 @@ Steps:
      
     For this play, we define tasks in `/home/dvans/ansibleproject/roles/master/tasks/main.yml`.  
 
-   Check the contents from the sample file: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/master/tasks/main.yml)
+    Contents of `/home/dvans/ansibleproject/roles/master/tasks/main.yml` is available at: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/master/tasks/main.yml)
    
    **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/master/tasks/`**
    
