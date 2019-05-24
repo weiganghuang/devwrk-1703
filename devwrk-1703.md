@@ -221,24 +221,27 @@ Steps:
     
    * `nso_install_packages.yml`, this yml file is to install unix-bind ned, dns manager service package, and inventory package. In this play book, we use block and looping.   
       
-     Sample file: [nso\_install\_packages.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_install_packages.yml)
-    
+     Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_install_packages`: [nso\_install\_packages.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_install_packages.yml)
+     
+     **You can also find the complete `nso_install.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install_packages.yml`** 
             
    * `nso_start.yml` defines a play to start NSO application.  
 
-     Sample file: [nso_start.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_start.yml)
-      
+     Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_start.yml`: [nso_start.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_start.yml)
+     
+     **You can also find the complete `nso_start.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_start.yml`**  
       
    * `nso_add_devices.yml`. This yml file creates devices and service inventory instances for NSO. We use xml based config files to load merge to NSO's cdb. In this play book, we use templates. The template files, `device.j2` and `inventory.j2` are covered at later step.  
     
-     Sample file: [nso\_add\_devices.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_add_devices.yml)
+     Contents of `home/dvans/ansibleproject/roles/nso/tasks/nso_add_devices.yml`: [nso\_add\_devices.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_add_devices.yml)
     
+     **You can also find the complete `nso_start.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_add_devices.yml`** 
       
    * `nso_postcheck.yml`.  In this play book, we pick two actions to make sure the installation is sucessful, rsa keys are exchanged among N,M,T1,T2 to allow required secure communication, and sudoers are set properly.    
 
-     Sample file: [nso_postcheck.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_postcheck.yml)
+     Contents of `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_postcheck.yml`: [nso_postcheck.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_postcheck.yml)
      
-   
+     **You can also find the complete `nso_start.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_postcheck.yml`** 
 
 5. Create template files for role "nso"
    
@@ -247,14 +250,19 @@ Steps:
    **Note, below two template files, `device.j2` and `inventory.j2` should be created at `/home/dvans/ansibleproject/roles/nso/templates/` directory.**
    
       
-    * `device.j2`, the xml format device config file with two variables. 
+   * `device.j2`, the xml format device config file with two variables. 
         
-      Sample file: [device.j2](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/templates/device.j2) 
+      Contents of `/home/dvans/ansibleproject/roles/nso/templates/device.j2`: [device.j2](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/templates/device.j2) 
     
+      **You can also find the complete `device.j2` at `/home/dvans/solution/ansibleproject/roles/nso/templates/device.j2`** 
+      
+      
     * `inventory.j2`, the xml format inventory template file to create inventory model in NSO's cdb. There is no veriable in this template.  
 
-      Sample file: [inventory.j2](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/templates/inventory.j2) 
+      Contents of `/home/dvans/ansibleproject/roles/nso/templates/inventory.j2`: [inventory.j2](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/templates/inventory.j2) 
        
+      **You can also find the complete `inventory.j2` at `/home/dvans/solution/ansibleproject/roles/nso/templates/inventory.j2`** 
+
    
 3. Create variables.
 
@@ -262,9 +270,12 @@ Steps:
    
    * Variables for inventory group "nso" is defined in `/home/dvans/ansibleproject/group_vars/nso`.   
          
-     Sample file: [nso](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/group_vars/nso)
+     Contents of `/home/dvans/ansibleproject/group_vars/nso`: [nso](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/group_vars/nso)
+     
+     **You can also find the complete `nso` at `/home/dvans/solution/ansibleproject/group_vars/nso`** 
+     
          
-   * We also defined a variable to be used for install syncdns package. It is pre-defined at `/home/dvans/ansibleproject/vars/labuser`. The sample file below shows the variable for lab user 17.
+   * We also defined a variable to be used for install syncdns package. It is pre-defined at `/home/dvans/ansibleproject/vars/labuser`. The sample file below shows the variable for lab user 1.
               
      Sample file: [labuser](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/vars/labuser)
 
