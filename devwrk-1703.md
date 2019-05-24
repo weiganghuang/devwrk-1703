@@ -159,13 +159,13 @@ Steps:
    
    Contents of `/home/dvans/ansibleproject/cl-playbook.yml` is available at: [cl-playbook.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/cl-playbook.yml)
    
-   **You can also find the complete `cl-playbook.yml` at `/home/dvans/solution/ansibleproject`**
+   **You can also find the complete `cl-playbook.yml` at `/home/dvans/solution/ansibleproject/cl-playbook.yml`**
    
 5. Create tasks for role "se". We add this role to ease the key exchange for nso host N, dns master M and dns targets T1/T2. The task of this role is to pre fetch public rsa key files from M, T1 and T2 to ansible controller A. The fetched publick key files are then distributed to proper user's authorized keys files. We define the task in `/home/dvans/ansibleproject/roles/se/tasks/main.yml`. 
 
     Contents of `/home/dvans/ansibleproject/roles/se/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/se/tasks/main.yml)
     
-    **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/se/tasks/`**
+    **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/se/tasks/main.yml`**
     
 6. Create tasks for role "master". As mentioned in the requirements, dns master M is managed by NSO. To meet the security compliance, the communication between NSO host N and M is limited to non-login, non-interactive, key based ssh. One of the tasks is to add rsa public key of N to M. In addition , we define a task to limit sudoers to perform only the allowed operations.  
   
@@ -175,14 +175,14 @@ Steps:
 
     Contents of `/home/dvans/ansibleproject/roles/master/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/master/tasks/main.yml)
    
-   **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/master/tasks/`**
+   **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/master/tasks/main.yml`**
    
 
 7. Create tasks for role "target". DNS master synchronize end user selected directory to targets. To comply with the company's security requirements, the communication between master (M) to targets (T1,T2) is no-login, non-interaction, key based ssh. The tasks defined for this role is to add rsa public key to T1 and T2 for peer user, and limit sudoers to perform only the allowed operations. Similar to that for "master", we define tasks in `/home/dvans/ansibleproject/roles/target/tasks/main.yml`. 
   
    Contents of `/home/dvans/ansibleproject/roles/target/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/target/tasks/main.yml)
    
-   **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/target/tasks/`**
+   **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/target/tasks/main.yml`**
           
 4. Create the following tasks for role "nso". 
 
@@ -195,19 +195,21 @@ Steps:
    
    **Note, the nso task yml files should be at directory `/home/dvans/ansibleproject/roles/nso/tasks/`.**   
    
-   All the above nso tasks are implemented with seperate yml files. They are included to main task yml file `main.yml`. 
+   All the above nso tasks are implemented with seperate yml files. 
+   
+   They are included to the main task yml file `main.yml`. 
    
    * `main.yml`, include all the task yml files.  
     
-   Contents of `/home/dvans/ansibleproject/roles/nso/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/main.yml)
+      Contents of `/home/dvans/ansibleproject/roles/nso/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/main.yml)
      
-   **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/`**  
+      **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/main.yml`**  
    
    * `nso_copy_images.yml` This yml file uses ansible copy and synchroize modules. Varialbes such as nso\_binary, nso\_image\_path, and etc, are defined under `group_vars/nso`, in previous step.
       
      Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_copy_images.yml`: [nso\_copy\_images.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso\_copy\_images.yml)
      
-     **You can also find the complete `nso_copy_images.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/`** 
+     **You can also find the complete `nso_copy_images.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_copy_images.yml`** 
      
    
    * `nso_install.yml` This yml file defines play to install NSO and set nso environment. 
@@ -215,7 +217,7 @@ Steps:
     
      Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_install.yml`: [nso_install.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_install.yml)
      
-      **You can also find the complete `nso_install.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/`** 
+      **You can also find the complete `nso_install.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install.yml`** 
     
    * `nso_install_packages.yml`, this yml file is to install unix-bind ned, dns manager service package, and inventory package. In this play book, we use block and looping.   
       
