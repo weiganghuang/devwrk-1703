@@ -91,7 +91,7 @@ Steps:
 
      ```
      [dvans@cl-lab-212 ~]$ ls
-     ansibleproject      ncs-4.5.0.1-unix- bind-2.0.0.tar.gz      solution
+     ansibleproject      ncs-4.5.0.1-unix-bind-2.0.0.tar.gz      solution
      dns-manager.tar.gz nso-4.5.0.1.linux.x86_64.installer.bin	inventory.tar.gz    scripts
      ```
    
@@ -107,8 +107,29 @@ Steps:
 2.  Inspect pre-populated Ansible inventory file `/home/dvans/home/ansibleproject/hosts`.  
 
     `hosts` contains the group ip address for hosts ( N, M, T1, and T2). Make sure the ip address of NSO matches to **_your Tile_**
+    
+    Example for user1:
+    
+    
+    ```
+    [nso]
+    172.23.123.231
+    [master]
+    172.23.123.228
+    [target1]
+    172.23.123.229
+    [target2]
+    172.23.123.230
+    [targets:children]
+    target1
+    target2
+    [all:children]
+    nso
+    master
+    targets
+    
+    ```
      
-    Sample contents of hosts: [hosts](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/hosts).
       
 3. Create roles using ansible-galaxy. `ansible-galaxy init` creates directories roles skeleton directories.
   
