@@ -87,7 +87,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
    * Check home directory, expect to see ansibleproject, image and package files, also check the helper scripts are pre-loaded for you. 
    
-     Sample output:
+     Expected output:
 
      ```
      [dvans@cl-lab-212 ~]$ ls
@@ -97,7 +97,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
    
    * Inspect `/home/asnibleproject`, expect to see `group_vars`, `hosts`, `roles`, and `vars`. 
 
-     Sample output:
+     Expected output:
 
      ```
      [dvans@cl-lab-212 ~]$ ls ansibleproject/
