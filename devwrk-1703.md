@@ -106,7 +106,10 @@ Steps:
  
 2.  Inspect pre-populated Ansible inventory file `/home/dvans/home/ansibleproject/hosts`.  
 
-    `hosts` contains the group ip address for hosts ( N, M, T1, and T2). Make sure the ip address of NSO matches to **_your Tile_**
+    `hosts` contains the group ip address for hosts ( N, M, T1, and T2). 
+    
+    **Make sure the ip address of NSO matches to _your Tile_**
+    
     
     Example for user1:
     
