@@ -286,7 +286,7 @@ Steps:
     Now we are ready to test the top level play book cl-playbook.yml. To execute, we invoke ansible-playbook command `ansible-playbook -i hosts cl-playbook.yml`   
     We expect it runs through successfully.  
      
-    Sample output: [sample_output](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/sample_output/output)
+    Check expected output: [expected_output](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/sample_output/output)
     
 ### References
 
