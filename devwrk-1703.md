@@ -74,7 +74,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
 Steps:  
 
-**_check your Tile_ for server ip and credentials**
+   **_check your Tile_ for server ip and credentials**
 
 1. RDP to Jump start server
 2. putty to your assigned ansible host (A) 
@@ -82,7 +82,7 @@ Steps:
 
 ### Create and Test Ansible Playbooks 
 
-1. Inspect pre-defined directories for the lab. 
+3. Inspect pre-defined directories for the lab. 
 
    Log on to your Ansible controller vm (A), **_check your Tile_**
  for VM assignment and credentials. 
