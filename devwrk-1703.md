@@ -74,6 +74,8 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
 Steps:  
 
+**_check your Tile_ for server ip and credentials**
+
 * RDP to Jump start server
 * putty to your assigned ansible host (A) 
  
