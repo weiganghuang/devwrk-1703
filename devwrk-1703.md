@@ -82,7 +82,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
 3. Inspect pre-defined directories for the lab. 
 
-   Log on to your Ansible controller vm (A), **_check your Tile_**
+   Log on to your Ansible host(A), **_check your Tile_**
  for VM assignment and credentials. 
 
    * Check home directory, expect to see ansibleproject, image and package files, also check the helper scripts are pre-loaded for you. 
