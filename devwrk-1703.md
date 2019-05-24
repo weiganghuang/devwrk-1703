@@ -156,7 +156,37 @@ Steps:
 5. Create playbook to invoke role based tasks.
  
    `/home/dvans/ansibleproject/cl-playbook.yml` is the playbook calls out all the roles we created in previous step; the associated main.yml play book for each role are executed in the order defined in `cl-playbook.yml`.  
-     
+   
+   Contents of `/home/dvans/ansibleproject/cl-playbook.yml`:
+   
+   ```
+   ---
+   #file: cl-playbook.yml
+   - hosts: "nso,master,target1,target2"
+     become: true
+     roles:
+       - role: se
+
+   - hosts: master
+     become_user: cl94644
+     become: true
+     roles:
+       - role: master
+
+   - hosts: "target1,target2"
+     become_user: root
+     become: true
+     roles:
+       - role: target
+
+   - hosts: nso
+     become_user: dvnso
+     become: true
+     roles:
+       - role: nso
+   ```
+
+    
    Sample file: [cl-playbook.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/cl-playbook.yml)
    
 5. Create tasks for role "se". We add this role to ease the key exchange for nso host N, dns master M and dns targets T1/T2. The task of this role is to pre fetch public rsa key files from M, T1 and T2 to ansible controller A. The fetched publick key files are then distributed to proper user's authorized keys files. We define the task in `/home/dvans/ansibleproject/roles/se/tasks/main.yml`.  
