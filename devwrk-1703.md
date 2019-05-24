@@ -108,7 +108,7 @@ Steps:
 
     `hosts` contains the group ip address for hosts ( N, M, T1, and T2). 
     
-    **Make sure the ip address of NSO (under [nso]) matches to the nso host on _your Tile_**
+    **Make sure the ip address of NSO (under [nso]) matches to the nso host ip (check _your Tile_)**
     
     
     Example for user1:
