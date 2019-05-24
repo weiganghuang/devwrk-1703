@@ -80,7 +80,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
 ### Create and Test Ansible Playbooks 
 
-3. Inspect pre-defined directories for the lab. 
+3. Inspect the pre-defined directories for the lab. 
 
    Log on to your Ansible host(A), **_check your Tile_**
  for VM assignment and credentials. 
