@@ -76,8 +76,8 @@ Steps:
 
 **_check your Tile_ for server ip and credentials**
 
-* RDP to Jump start server
-* putty to your assigned ansible host (A) 
+1. RDP to Jump start server
+2. putty to your assigned ansible host (A) 
  
 
 ### Create and Test Ansible Playbooks 
