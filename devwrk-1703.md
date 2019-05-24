@@ -191,9 +191,28 @@ Steps:
    
    **You can also find the complete `cl-playbook.yml` at `/home/dvans/solution/ansibleproject`**
    
-5. Create tasks for role "se". We add this role to ease the key exchange for nso host N, dns master M and dns targets T1/T2. The task of this role is to pre fetch public rsa key files from M, T1 and T2 to ansible controller A. The fetched publick key files are then distributed to proper user's authorized keys files. We define the task in `/home/dvans/ansibleproject/roles/se/tasks/main.yml`.  
+5. Create tasks for role "se". We add this role to ease the key exchange for nso host N, dns master M and dns targets T1/T2. The task of this role is to pre fetch public rsa key files from M, T1 and T2 to ansible controller A. The fetched publick key files are then distributed to proper user's authorized keys files. We define the task in `/home/dvans/ansibleproject/roles/se/tasks/main.yml`. 
+
+    Contents of `main.yml`:
+    
+    ```
+    ---
+    #file: roles/se/tasks/main.yml
+
+    - name: fetch public key files
+      tags: se
+      fetch:
+        src: '/home/{{item}}/.ssh/id_rsa.pub'
+        dest: '/var/tmp/{{item}}'
+      with_items:
+        - cl00254
+        - cl94644
+        - dvnso
+    ```
     
     Sample file: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/se/tasks/main.yml)
+    
+    **You can also find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/se/tasks/`**
     
 6. Create tasks for role "master". As mentioned in the requirements, dns master M is managed by NSO. To meet the security compliance, the communication between NSO host N and M is limited to non-login, non-interactive, key based ssh. One of the tasks is to add rsa public key of N to M. In addition , we define a task to limit sudoers to perform only the allowed operations.  
   
