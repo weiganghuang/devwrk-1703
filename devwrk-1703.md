@@ -87,7 +87,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
    * Check home directory, expect to see ansibleproject, image and package files, also check the helper scripts are pre-loaded for you. 
    
-     * `ansibleproject`: the directory for your lab
+     * `ansibleproject`: lab working directory
      * lab image files: 
        * `ncs-4.5.0.1-unix-bind-2.0.0.tar.gz`: NED for DNS servers
        * `dns-manager.tar.gz`: NSO service package for DNS sync.
