@@ -93,7 +93,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
        * `dns-manager.tar.gz`: NSO service package for DNS sync.
        * `nso-4.5.0.1.linux.x86_64.installer.bin`: NSO installer
        * `inventory.tar.gz`: inventory files to add DNS servers to NSO
-     * `scripts`: contains the helper scripts for nso operations
+     * `scripts`: helper scripts for nso operations
      * `solution`: lab solution directory
    
      Expected output:
