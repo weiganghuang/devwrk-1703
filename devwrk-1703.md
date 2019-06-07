@@ -169,7 +169,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
    Contents of `/home/dvans/ansibleproject/cl-playbook.yml` is available at: [cl-playbook.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/cl-playbook.yml)
    
    **You can find the complete `cl-playbook.yml` at `/home/dvans/solution/ansibleproject/cl-playbook.yml`**<br/>
-   **Use the command  to copy the required files to your ansibleproject folder<br/>  `cp /home/dvans/solution/ansibleproject/cl-playbook.yml /home/dvans/ansibleproject/cl-playbook.yml`**
+   **Use the command below to copy the required files to your ansibleproject folder<br/>  `cp /home/dvans/solution/ansibleproject/cl-playbook.yml /home/dvans/ansibleproject/cl-playbook.yml`**
 
 5. Create tasks for role "se". We add this role to ease the key exchange for nso host N, dns master M and dns targets T1/T2. The task of this role is to pre fetch public rsa key files from M, T1 and T2 to ansible controller A. The fetched publick key files are then distributed to proper user's authorized keys files. We define the task in `/home/dvans/ansibleproject/roles/se/tasks/main.yml`. 
 
