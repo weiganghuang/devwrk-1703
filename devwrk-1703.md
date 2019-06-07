@@ -115,7 +115,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
  
 2.  Inspect pre-populated Ansible inventory file `/home/dvans/home/ansibleproject/hosts`.  
 
-    `hosts` contains the group ip address for hosts ( N, M, T1, and T2). 
+    `hosts` contains the group ip address for hosts ( N-NSO, M-Master, T1-Target1, and T2-Target2). 
     
     **Make sure the ip address of NSO (under [nso]) matches to the nso host ip (check _your Tile_)**
     
