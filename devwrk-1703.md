@@ -104,7 +104,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
      dns-manager.tar.gz nso-4.5.0.1.linux.x86_64.installer.bin	inventory.tar.gz    scripts
      ```
    
-   * Inspect `/home/asnibleproject`, expect to see `group_vars`, `hosts`, `roles`, and `vars`. 
+   * Inspect `/home/ansibleproject`, expect to see `group_vars`, `hosts`, `roles`, and `vars`. 
 
      Expected output:
 
