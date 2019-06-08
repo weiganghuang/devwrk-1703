@@ -170,7 +170,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
    
    **You can find the complete `cl-playbook.yml` at `/home/dvans/solution/ansibleproject/cl-playbook.yml`**
    
-   **As an alternative, you can use the command below to copy the required files to your ansibleproject folder**
+   **As an alternative, you can use the command below to copy the file to your `ansibleproject` folder**
    
    ```
    cp /home/dvans/solution/ansibleproject/cl-playbook.yml /home/dvans/ansibleproject/cl-playbook.yml
