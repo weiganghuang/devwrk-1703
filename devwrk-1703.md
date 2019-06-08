@@ -195,6 +195,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
     Contents of `/home/dvans/ansibleproject/roles/master/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/master/tasks/main.yml)
    
    **You can find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/master/tasks/main.yml`**<br/>
+   
    **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
    ```
    cp /home/dvans/solution/ansibleproject/roles/master/tasks/main.yml /home/dvans/ansibleproject/roles/master/tasks/main.yml
