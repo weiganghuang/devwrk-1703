@@ -100,8 +100,8 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
 
      ```
      [dvans@cl-lab-212 ~]$ ls
-     ansibleproject      ncs-4.5.0.1-unix-bind-2.0.0.tar.gz        solution
-     dns-manager.tar.gz  nso-4.5.0.1.linux.x86_64.installer.bin	inventory.tar.gz    scripts
+     ansibleproject      ncs-4.5.0.1-unix-bind-2.0.0.tar.gz          solution
+     dns-manager.tar.gz  nso-4.5.0.1.linux.x86_64.installer.bin inventory.tar.gz    scripts
      ```
    
    * Inspect `/home/asnibleproject`, expect to see `group_vars`, `hosts`, `roles`, and `vars`. 
