@@ -181,6 +181,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
     Contents of `/home/dvans/ansibleproject/roles/se/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/se/tasks/main.yml)
     
     **You can find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/se/tasks/main.yml`**<br/>
+    
     **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
     ```
     cp /home/dvans/solution/ansibleproject/roles/se/tasks/main.yml /home/dvans/ansibleproject/roles/se/tasks/main.yml
@@ -207,7 +208,11 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
    Contents of `/home/dvans/ansibleproject/roles/target/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/target/tasks/main.yml)
    
    **You can find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/target/tasks/main.yml`**<br/>
-   **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/target/tasks/main.yml /home/dvans/ansibleproject/roles/target/tasks/main.yml`**
+   
+   **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
+   ```
+   cp /home/dvans/solution/ansibleproject/roles/target/tasks/main.yml /home/dvans/ansibleproject/roles/target/tasks/main.yml
+   ```
           
 4. Create the following tasks for role "nso". 
 
@@ -229,14 +234,23 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
       Contents of `/home/dvans/ansibleproject/roles/nso/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/main.yml)
      
       **You can find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/main.yml`**<br/>
-      **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/tasks/main.yml /home/dvans/ansibleproject/roles/nso/tasks/main.yml`**
+      
+      **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
+      ```
+      cp /home/dvans/solution/ansibleproject/roles/nso/tasks/main.yml /home/dvans/ansibleproject/roles/nso/tasks/main.yml
+      ```
    
    * `nso_copy_images.yml` This yml file uses ansible copy and synchroize modules. Varialbes such as nso\_binary, nso\_image\_path, and etc, are defined under `group_vars/nso`, in previous step.
       
      Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_copy_images.yml`: [nso\_copy\_images.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso\_copy\_images.yml)
      
      **You can find the complete `nso_copy_images.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_copy_images.yml`**<br/> 
-      **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_copy_images.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_copy_images.yml`**
+     
+      **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder** 
+      
+      ```
+      cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_copy_images.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_copy_images.yml
+      ```
      
    
    * `nso_install.yml` This yml file defines play to install NSO and set nso environment. 
@@ -245,35 +259,57 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
      Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_install.yml`: [nso_install.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_install.yml)
      
       **You can find the complete `nso_install.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install.yml`**<br/> 
-      **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_install.yml`**
+      
+      **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder** 
+      ```
+      cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_install.yml
+      ```
       
    * `nso_install_packages.yml`, this yml file is to install unix-bind ned, dns manager service package, and inventory package. In this play book, we use block and looping.   
       
      Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_install_packages`: [nso\_install\_packages.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_install_packages.yml)
      
      **You can find the complete `nso_install.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install_packages.yml`**<br/>
-     **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install_packages.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_install_packages.yml`**
+     
+     **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder** 
+     
+     ```
+     cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_install_packages.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_install_packages.yml
+     ```
              
    * `nso_start.yml` defines a play to start NSO application.  
 
      Contents of `/home/dvans/ansibleproject/roles/nso/tasks/nso_start.yml`: [nso_start.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_start.yml)
      
      **You can find the complete `nso_start.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_start.yml`**<br/>  
-      **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_start.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_start.yml`**
+     
+      **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder** 
+      ```
+      cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_start.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_start.yml
+      ```
       
    * `nso_add_devices.yml`. This yml file creates devices and service inventory instances for NSO. We use xml based config files to load merge to NSO's cdb. In this play book, we use templates. The template files, `device.j2` and `inventory.j2` are covered at later step.  
     
      Contents of `home/dvans/ansibleproject/roles/nso/tasks/nso_add_devices.yml`: [nso\_add\_devices.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_add_devices.yml)
     
      **You can find the complete `nso_start.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_add_devices.yml`**<br/> 
-      **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_add_devices.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_add_devices.yml`**
+     
+      **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
+      ```
+      cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_add_devices.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_add_devices.yml
+      ```
       
    * `nso_postcheck.yml`.  In this play book, we pick two actions to make sure the installation is sucessful, rsa keys are exchanged among N,M,T1,T2 to allow required secure communication, and sudoers are set properly.    
 
      Contents of `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_postcheck.yml`: [nso_postcheck.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/tasks/nso_postcheck.yml)
      
      **You can find the complete `nso_start.yml` at `/home/dvans/solution/ansibleproject/roles/nso/tasks/nso_postcheck.yml`**<br/> 
-     **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_postcheck.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_postcheck.yml`**
+     
+     **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
+     
+     ```
+     cp /home/dvans/solution/ansibleproject/roles/nso/tasks/nso_postcheck.yml /home/dvans/ansibleproject/roles/nso/tasks/nso_postcheck.yml
+     ```
      
 5. Create template files for role "nso"
    
@@ -287,14 +323,24 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
       Contents of `/home/dvans/ansibleproject/roles/nso/templates/device.j2`: [device.j2](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/templates/device.j2) 
     
       **You can find the complete `device.j2` at `/home/dvans/solution/ansibleproject/roles/nso/templates/device.j2`**<br/> 
-      **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/templates/device.j2 /home/dvans/ansibleproject/roles/nso/templates/device.j2`**
+      
+      **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder** 
+      
+      ```
+      cp /home/dvans/solution/ansibleproject/roles/nso/templates/device.j2 /home/dvans/ansibleproject/roles/nso/templates/device.j2
+      ```
       
     * `inventory.j2`, the xml format inventory template file to create inventory model in NSO's cdb. There is no veriable in this template.  
 
       Contents of `/home/dvans/ansibleproject/roles/nso/templates/inventory.j2`: [inventory.j2](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/nso/templates/inventory.j2) 
        
       **You can find the complete `inventory.j2` at `/home/dvans/solution/ansibleproject/roles/nso/templates/inventory.j2`**<br/> 
-      **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/nso/templates/inventory.j2 /home/dvans/ansibleproject/roles/nso/templates/inventory.j2`**
+      
+      **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
+      
+      ```
+      cp /home/dvans/solution/ansibleproject/roles/nso/templates/inventory.j2 /home/dvans/ansibleproject/roles/nso/templates/inventory.j2
+      ```
    
 3. Create variables.
 
@@ -305,7 +351,12 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
      Contents of `/home/dvans/ansibleproject/group_vars/nso`: [nso](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/group_vars/nso)
      
      **You can find the complete `nso` at `/home/dvans/solution/ansibleproject/group_vars/nso`**<br/> 
-     **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/group_vars/nso /home/dvans/ansibleproject/group_vars/nso`**
+     
+     **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
+     
+     ```
+     cp /home/dvans/solution/ansibleproject/group_vars/nso /home/dvans/ansibleproject/group_vars/nso
+     ```
          
    * We pre-defined a variable to be used for install syncdns package in file `/home/dvans/ansibleproject/vars/labuser`. The sample file below shows the variable for lab user 1.
               
