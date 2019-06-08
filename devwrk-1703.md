@@ -195,7 +195,10 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
     Contents of `/home/dvans/ansibleproject/roles/master/tasks/main.yml`: [main.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/roles/master/tasks/main.yml)
    
    **You can find the complete `main.yml` at `/home/dvans/solution/ansibleproject/roles/master/tasks/main.yml`**<br/>
-   **Use the command below to copy the required files to your ansibleproject folder<br/> `cp /home/dvans/solution/ansibleproject/roles/master/tasks/main.yml /home/dvans/ansibleproject/roles/master/tasks/main.yml`**
+   **As an alternative, you can use the command below to copy the solution file to your `ansibleproject` folder**
+   ```
+   cp /home/dvans/solution/ansibleproject/roles/master/tasks/main.yml /home/dvans/ansibleproject/roles/master/tasks/main.yml
+   ```
    
 
 7. Create tasks for role "target". DNS master synchronize end user selected directory to targets. To comply with the company's security requirements, the communication between master (M) to targets (T1,T2) is no-login, non-interaction, key based ssh. The tasks defined for this role is to add rsa public key to T1 and T2 for peer user, and limit sudoers to perform only the allowed operations. Similar to that for "master", we define tasks in `/home/dvans/ansibleproject/roles/target/tasks/main.yml`. 
