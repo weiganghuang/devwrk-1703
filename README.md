@@ -1,4 +1,4 @@
-![](./media/media/image2.png)
+![](./media/media/clcancun.png)
 # DevNet Workshop 
 # Build an Ansible Playbook to Automate NSO Service Package Deployment  
 ## Hands On Guide
