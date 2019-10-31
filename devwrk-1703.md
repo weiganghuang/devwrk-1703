@@ -5,8 +5,6 @@
 
 ## Hands On Guide
 
-### Author
-
 ### Weigang Huang, CCIE #49667
  
 ### Business Development Manager
