@@ -1,6 +1,16 @@
 ![](./media/media/clcancun.png)
 # DevNet Workshop 
 # Build an Ansible Playbook to Automate NSO Service Package Deployment  
+
+Author
+
+Weigang Huang, CCIE #49667
+ 
+Business Development Manager
+
+Cisco Systems
+
+
 ## Hands On Guide
 
 ****
