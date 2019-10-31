@@ -5,11 +5,9 @@
 
 ## Hands On Guide
 
-### Weigang Huang, CCIE #49667
- 
-### Business Development Manager
-
-### Cisco Systems
+#### Weigang Huang, CCIE #49667
+#### Business Development Manager
+#### Cisco Systems
 
 ****
 
