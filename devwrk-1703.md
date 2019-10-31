@@ -166,6 +166,33 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
  
    `/home/dvans/ansibleproject/cl-playbook.yml` is the playbook calls out all the roles we created in previous step; the associated main.yml play book for each role are executed in the order defined in `cl-playbook.yml`.  
    
+   ```
+   ---
+   #file: cl-playbook.yml
+   - hosts: "nso,master,target1,target2"
+   	  become: true
+     roles:
+       - role: se
+
+   - hosts: master
+     become_user: cl94644
+     become: true
+     roles:
+     - role: master
+
+   - hosts: "target1,target2"
+     become_user: root
+     become: true
+     roles:
+       - role: target
+
+   - hosts: nso
+     become_user: dvnso
+     become: true
+     roles:
+       - role: nso
+   ```
+   
    Contents of `/home/dvans/ansibleproject/cl-playbook.yml` is available at: [cl-playbook.yml](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/cl-playbook.yml)
    
    **You can find the complete `cl-playbook.yml` at `/home/dvans/solution/ansibleproject/cl-playbook.yml`**
@@ -362,7 +389,7 @@ The set up is composed of five VM's: Ansible controller (A), NSO(N), DNS master 
               
      Sample file: [labuser](https://github.com/weiganghuang/devwrk-1703/blob/master/ansibleproject/vars/labuser)
      
-     Check the contents of `/home/dvans/ansibleproject/vars/labuser`, make sure it matches to your assigned lab user (user1, ..., user8)
+     Check the contents of `/home/dvans/ansibleproject/vars/labuser`, make sure it matches to your assigned lab user (user1, ..., user10)
 
    
 10. Testing  
